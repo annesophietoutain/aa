@@ -1,11 +1,6 @@
-[![GitHub version](https://badge.fury.io/gh/tomchadwin%2Fqgis2web.svg)](https://badge.fury.io/gh/tomchadwin%2Fqgis2web)
-[![Build Status](https://travis-ci.org/tomchadwin/qgis2web.svg?branch=master)](https://travis-ci.org/tomchadwin/qgis2web)
-[![Coverage Status](https://coveralls.io/repos/github/tomchadwin/qgis2web/badge.svg?branch=master)](https://coveralls.io/github/tomchadwin/qgis2web?branch=master)
-[![Join the chat at https://gitter.im/tomchadwin/qgis2web](https://badges.gitter.im/tomchadwin/qgis2web.svg)](https://gitter.im/tomchadwin/qgis2web?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Donate to QGIS](https://img.shields.io/badge/donate%20to-QGIS-green.svg)](http://qgis.org/en/site/getinvolved/donations.html)
 <h1>qgis2web</h1>
-<p>QGIS plugin to export your project to a Leaflet, OpenLayers or Mapbox GL JS 
-webmap. No server-side software required.</p>
+<p>QGIS plugin to export your project to an OpenLayers or Leaflet webmap. No
+server-side software required.</p>
 
 <h2>Installation</h2>
 <ul>
@@ -43,31 +38,29 @@ to your QGIS project, so save your project if you want to keep these settings.
 </p>
 
 <h2>Current limitations</h2>
-<p>QGIS, Leaflet, OpenLayers, and Mapbox GL JS are all different mapping 
-technologies. This means that their respective functionality differs in many 
-ways. qgis2web does its best to interpret a QGIS project and to export HTML, 
-Javascript, and CSS to create a web map as close to the QGIS project as 
-possible.</p>
+<p>QGIS, OpenLayers, and Leaflet are all different mapping technologies.
+This means that their respective functionality differs in many ways. qgis2web
+does its best to interpret a QGIS project and to export HTML, Javascript, and
+CSS to create a web map as close to the QGIS project as possible.</p>
 <p>However, many elements of a QGIS project cannot be reproduced, and many are
-only possible in <em>either</em> Leaflet, OpenLayers, <em>or</em> Mapbox GL 
-JS. qgis2web tries its best to produce a publish-ready map, but you can always 
-manually edit the output code to achieve what qgis2web cannot.</p>
+only possible in <em>either</em> OpenLayers <em>or</em> Leaflet. qgis2web
+tries its best to produce a publish-ready map, but you can always manually edit
+the output code to achieve what qgis2web cannot.</p>
 <ul>
-    <li>in OpenLayers maps, only single rendered points cluster, not 
-        categorized or graduated</li>
-    <li>line style (dashed/dotted) does not appear in OpenLayers preview, but 
-        works in export</li>
+    <li>in OL3 maps, only single rendered points cluster, not categorized
+        or graduated</li>
+    <li>line style (dashed/dotted) does not appear in OL3 preview, but works in
+        export</li>
     <li>only a single 2.5d layer will render per map</li>
     <li>2.5d layers only appear when zoomed in to building scales</li>
-    <li>attribute filters and abstract export only works in leaflet based 
-        webmaps</li>
+    <li>Attribute filters and abstract export are currently limited to leaflet exports</li>
 </ul>
 
 <h3>Layer options</h3>
 <dl>
     <dt>Popup fields</dt>
         <dd>Specify how each field will be labelled in popups</dd>
-    dt>Popups</dt>
+    <dt>Popups</dt>
         <dd>Specify, whether or not a layer shows a popup on a click. If not, the layer is not even clickable</dd>
     <dt>Visible</dt>
         <dd>Select whether the layer will be visible on map load. This only
@@ -113,7 +106,7 @@ manually edit the output code to achieve what qgis2web cannot.</p>
 <h4>Appearance</h4>
 <dl>
     <dt>Add abstract</dt>
-        <dd>This will push the abtract from the projects metadata (field abstract) into the webmap as a collapsible info box. Supported in leaflet only</dd>
+        <dd>This will push the abtract from the projects metadata into the webmap as a collapsible info box. Supported in leaflet only</dd>
     <dt>Add address search</dt>
         <dd>Add field to allow searching for locations (geocode)</dd>
     <dt>Add layers list</dt>
@@ -135,8 +128,7 @@ manually edit the output code to achieve what qgis2web cannot.</p>
         <dd>Show popups when mouse hovers over features</dd>
     <dt>Template</dt>
         <dd>Select HTML template for webmap - add your own templates to the
-            /qgis2web/templates directory in your current QGIS3 profile 
-            folder</dd>
+            /qgis2web/templates directory in your .qgis2 folder</dd>
 </dl>
 
 <h2>Reporting bugs</h2>
@@ -184,7 +176,6 @@ software:</p>
     <li>QGIS</li>
     <li>OpenLayers</li>
     <li>Leaflet</li>
-    <li>Mapbox GL JS</li>
 </ul>
 
 <p>Thanks are also due for major code contributions to:</p>
@@ -202,7 +193,6 @@ software:</p>
 
 <p>In addition, the following libraries have been used:</p>
 <ul>
-    <li>bridge-style, by @volaya</li>
     <li>ol3-layerswitcher, by @walkermatt</li>
     <li>Autolinker.js, by @gregjacobs</li>
     <li>requestAnimationFrame polyfill, by @paulirish</li>
@@ -225,6 +215,3 @@ software:</p>
     <li>Leaflet.pattern, by @teastman</li>
     <li>Leaflet.VectorGrid, by @IvanSanchez</li>
 </ul>
-
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/tomchadwin/qgis2web.svg)](https://greenkeeper.io/)
